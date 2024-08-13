@@ -74,7 +74,7 @@ public class SecurityConfig {
         public CorsConfigurationSource corsConfigurationSource() {
                 CorsConfiguration corsConfiguration = new CorsConfiguration();
                 // Note : Replace with server url/ip in production
-                corsConfiguration.setAllowedOrigins(Arrays.asList("http://localhost:5173"));
+                corsConfiguration.setAllowedOrigins(Arrays.asList("http://localhost:5173","http://34.228.136.252:7777/swagger-ui/index.html","http://34.228.136.252"));
                 corsConfiguration.setAllowedHeaders(Arrays.asList(AUTHORIZATION, CONTENT_TYPE));
                 corsConfiguration.setAllowedMethods(Arrays.asList(GET.name(), POST.name(), PUT.name(), PATCH.name(),
                                 DELETE.name(), HEAD.name(), OPTIONS.name()));
