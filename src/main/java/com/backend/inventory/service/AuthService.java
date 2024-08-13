@@ -1,6 +1,5 @@
 package com.backend.inventory.service;
 
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -43,7 +42,7 @@ public class AuthService {
                 .password(passwordEncoder.encode(registerRequest.getPassword()))
                 .phone(registerRequest.getPhone())
                 .address(registerRequest.getAddress())
-                .role(User.Role.STUDENT)
+                .role(User.Role.USER)
                 .build();
         userRepository.save(user);
         return "User registered successfully.";
