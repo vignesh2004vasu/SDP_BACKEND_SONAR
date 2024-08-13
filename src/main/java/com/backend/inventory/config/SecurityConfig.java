@@ -1,6 +1,5 @@
 package com.backend.inventory.config;
 
-
 import java.util.Arrays;
 
 import org.springframework.context.annotation.Bean;
@@ -48,7 +47,7 @@ public class SecurityConfig {
                         "/swagger-ui.html/**",
                         "/api/admin/default",
                         "/v3/api-docs/**",
-                        
+
         };
 
         @Bean
@@ -74,7 +73,7 @@ public class SecurityConfig {
         public CorsConfigurationSource corsConfigurationSource() {
                 CorsConfiguration corsConfiguration = new CorsConfiguration();
                 // Note : Replace with server url/ip in production
-                corsConfiguration.setAllowedOrigins(Arrays.asList("http://localhost:5173","http://34.228.136.252:7777/swagger-ui/index.html","http://34.228.136.252"));
+                corsConfiguration.setAllowedOrigins(Arrays.asList("http://34.228.136.252:80"));
                 corsConfiguration.setAllowedHeaders(Arrays.asList(AUTHORIZATION, CONTENT_TYPE));
                 corsConfiguration.setAllowedMethods(Arrays.asList(GET.name(), POST.name(), PUT.name(), PATCH.name(),
                                 DELETE.name(), HEAD.name(), OPTIONS.name()));
