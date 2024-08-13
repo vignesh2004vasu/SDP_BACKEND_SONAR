@@ -73,7 +73,7 @@ public class SecurityConfig {
         public CorsConfigurationSource corsConfigurationSource() {
                 CorsConfiguration corsConfiguration = new CorsConfiguration();
                 // Note : Replace with server url/ip in production
-                corsConfiguration.setAllowedOrigins(Arrays.asList("http://34.228.136.252:80"));
+                corsConfiguration.setAllowedOrigins(Arrays.asList("http://34.228.136.252:80", "http://34.228.136.252"));
                 corsConfiguration.setAllowedHeaders(Arrays.asList(AUTHORIZATION, CONTENT_TYPE));
                 corsConfiguration.setAllowedMethods(Arrays.asList(GET.name(), POST.name(), PUT.name(), PATCH.name(),
                                 DELETE.name(), HEAD.name(), OPTIONS.name()));
