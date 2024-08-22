@@ -75,7 +75,9 @@ public class SecurityConfig {
                 // Note : Replace with server url/ip in production
                 corsConfiguration.setAllowedOrigins(Arrays.asList("http://3.224.189.178:80/", "http://3.224.189.178/",
                                 "http://3.224.189.178:80", "http://3.224.189.178", "http://3.224.189.178:80/**",
-                                "http://3.224.189.178/**", "https://invkeep.ddns.net"));
+                                "http://3.224.189.178/**", "http://invkeep.ddns.net", "http://invkeep.ddns.net/",
+                                "http://invkeep.ddns.net/**", "http://invkeep.ddns.net:80/",
+                                "http://invkeep.ddns.net:80/**"));
                 corsConfiguration.setAllowedHeaders(Arrays.asList(AUTHORIZATION, CONTENT_TYPE));
                 corsConfiguration.setAllowedMethods(Arrays.asList(GET.name(), POST.name(), PUT.name(), PATCH.name(),
                                 DELETE.name(), HEAD.name(), OPTIONS.name()));
